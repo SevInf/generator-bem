@@ -1,0 +1,10 @@
+{
+  "name": "<%= _.slugify(projectName) %>",
+  "version": "0.0.1",
+  "dependencies": {
+<%= _.map(libs, function(lib) {
+    return "    " + _.quote(lib.name) + ": " + _.quote(lib.version);
+}).join(',\n') %>
+  }
+}
+
